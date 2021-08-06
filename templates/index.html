@@ -1,0 +1,38 @@
+<html lang='en' dor='ltr'>
+
+<head>
+    <title>weather</title>
+    <center>
+        <h1>Weather App</h1>
+    </center>
+</head>
+
+<body>
+    <center class="row">
+        <form action="" method="post" class="col-md-6 col-md-offset-3">
+          {% csrf_token %}
+          <div class="input-group">
+            <input type="text" class="form-control" name="city" placeholder="Search">
+                <button class="search-btn">
+                    &#x1F50D
+                </button>
+        <form>
+    </center>
+    
+    <center>
+        <div class='row'>
+            {% if city %}
+            <div class='col-md-6 col-md-offset-3'>
+                <h3>location: {{city}}</h3>
+                <h3>corrodinate: {{coordinate}}</h3>
+                <h3>weather: {{weather}}</h3>
+                <h3>temparature: {{temp}}</h3>
+                <h3>humidity: {{humidity}}</h3>
+                <h3>wind speed: {{windspeed}}</h3>
+            </div>
+            {% endif %}
+        </div>
+    </center>
+</body>
+
+</html>
